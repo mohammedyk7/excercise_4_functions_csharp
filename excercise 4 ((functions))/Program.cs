@@ -181,7 +181,7 @@ class Program
         PrintValue("Enter first number: ");
         double a = int.Parse(Console.ReadLine());
         PrintValue("Enter second number: ");
-        double b = Convert.ToDouble(Console.ReadLine());
+        double b = int.Parse(Console.ReadLine());
         PrintValue("Enter operator (+, -, *, /): ");
         string op = Console.ReadLine();
 
