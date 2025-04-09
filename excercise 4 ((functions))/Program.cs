@@ -8,7 +8,7 @@ class Program
         while (true)
         {
             // Display menu options
-            PrintValue("\n--- Choose an Option ---");
+            PrintValue("\n--- Choose an Option ---"); //printvalue displays instead of the console.writeline
             PrintValue("1. Even or Odd");
             PrintValue("2. Largest of Three Numbers");
             PrintValue("3. Celsius to Fahrenheit");
