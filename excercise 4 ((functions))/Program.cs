@@ -77,7 +77,7 @@ class Program
     public static void EvenOrOdd()
     {
         PrintValue("Enter a number: ");
-        int num = Convert.ToInt32(Console.ReadLine());
+        int num = int.Parse(Console.ReadLine());
         PrintValue(num % 2 == 0 ? "Even" : "Odd");
     }
 
