@@ -89,7 +89,7 @@ class Program
         PrintValue("Enter second number: ");
         int b = int.Parse(Console.ReadLine());
         PrintValue("Enter third number: ");
-        int c = Convert.ToInt32(Console.ReadLine());
+        int c = int.Parse(Console.ReadLine());
 
         int largest = a; // Assume the first number is the largest
         if (b > largest) largest = b; // Compare with the second number
