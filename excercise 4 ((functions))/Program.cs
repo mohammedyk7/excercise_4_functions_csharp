@@ -87,7 +87,7 @@ class Program
         PrintValue("Enter first number: ");
         int a = int.Parse(Console.ReadLine());
         PrintValue("Enter second number: ");
-        int b = Convert.ToInt32(Console.ReadLine());
+        int b = int.Parse(Console.ReadLine());
         PrintValue("Enter third number: ");
         int c = Convert.ToInt32(Console.ReadLine());
 
