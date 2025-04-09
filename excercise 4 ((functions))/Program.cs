@@ -179,7 +179,7 @@ class Program
     public static void SimpleCalculator()
     {
         PrintValue("Enter first number: ");
-        double a = Convert.ToDouble(Console.ReadLine());
+        double a = int.Parse(Console.ReadLine());
         PrintValue("Enter second number: ");
         double b = Convert.ToDouble(Console.ReadLine());
         PrintValue("Enter operator (+, -, *, /): ");
