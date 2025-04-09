@@ -67,7 +67,7 @@ class Program
         }
     }
 
-    // Built-in function to replace Console.WriteLine
+    
     public static void PrintValue(string message)//to replace the console.writeline
     {
         Console.WriteLine(message);
@@ -85,7 +85,7 @@ class Program
     public static void FindLargest()
     {
         PrintValue("Enter first number: ");
-        int a = Convert.ToInt32(Console.ReadLine());
+        int a = int.Parse(Console.ReadLine());
         PrintValue("Enter second number: ");
         int b = Convert.ToInt32(Console.ReadLine());
         PrintValue("Enter third number: ");
