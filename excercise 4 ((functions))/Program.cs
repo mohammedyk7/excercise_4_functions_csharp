@@ -120,7 +120,7 @@ class Program
     public static void GradeSystem()
     {
         PrintValue("Enter score (0-100): ");
-        int score = Convert.ToInt32(Console.ReadLine());
+        int score = int.Parse(Console.ReadLine());
 
         // Determine grade based on score ranges
         if (score >= 90) PrintValue("Grade: A");
