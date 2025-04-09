@@ -78,7 +78,7 @@ class Program
     {
         PrintValue("Enter a number: ");
         int num = int.Parse(Console.ReadLine());
-        PrintValue(num % 2 == 0 ? "Even" : "Odd");
+        PrintValue(num % 2 == 0 ? "Even" : "Odd"); //i used terminal operator to check even or odd
     }
 
     // Function to find the largest of three numbers
