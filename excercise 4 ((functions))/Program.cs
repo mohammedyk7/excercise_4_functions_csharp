@@ -8,7 +8,7 @@ class Program
         while (true)
         {
             // Display menu options
-            PrintValue("\n--- Choose an Option ---"); //printvalue displays instead of the console.writeline
+            PrintValue("\n--- Choose an Option ---"); // printvalue displays instead of the console.writeline
             PrintValue("1. Even or Odd");
             PrintValue("2. Largest of Three Numbers");
             PrintValue("3. Celsius to Fahrenheit");
@@ -46,7 +46,7 @@ class Program
                     GradeSystem(); // Determine grade based on score
                     break;
                 case "6":
-                    SwapNumbers(); // Swap two numbers
+                    SwapNumbersMenu(); // Menu for swapping numbers
                     break;
                 case "7":
                     ConvertDays(); // Convert days to weeks and days
@@ -67,8 +67,7 @@ class Program
         }
     }
 
-    
-    public static void PrintValue(string message)//to replace the console.writeline
+    public static void PrintValue(string message) // To replace Console.WriteLine
     {
         Console.WriteLine(message);
     }
@@ -78,7 +77,7 @@ class Program
     {
         PrintValue("Enter a number: ");
         int num = int.Parse(Console.ReadLine());
-        PrintValue(num % 2 == 0 ? "Even" : "Odd"); //i used terminal operator to check even or odd
+        PrintValue(num % 2 == 0 ? "Even" : "Odd"); // i used terminal operator to check even or odd
     }
 
     // Function to find the largest of three numbers
@@ -130,20 +129,54 @@ class Program
         else PrintValue("Grade: F");
     }
 
-    // Function to swap two numbers
-    public static void SwapNumbers()
+    // Menu for swapping numbers
+    public static void SwapNumbersMenu()
     {
-        PrintValue("Enter first number: ");
-        int a = Convert.ToInt32(Console.ReadLine());
-        PrintValue("Enter second number: ");
-        int b = Convert.ToInt32(Console.ReadLine());
+        PrintValue("Choose swap method:");
+        PrintValue("1. Swap using temporary variable");
+        PrintValue("2. Swap using ref keyword");
+        string choice = Console.ReadLine();
 
-        // Swap logic using a temporary variable
+        PrintValue("Enter first number: ");
+        int a = int.Parse(Console.ReadLine());
+        PrintValue("Enter second number: ");
+        int b = int.Parse(Console.ReadLine());
+
+        if (choice == "1")
+        {
+            SwapNumbers(a, b); // Call the method without ref
+        }
+        else if (choice == "2")
+        {
+            SwapNumbers(ref a, ref b); // Call the method with ref
+        }
+        else
+        {
+            PrintValue("Invalid choice.");
+            return;
+        }
+
+        PrintValue($"After swap: a = {a}, b = {b}");
+    }
+
+    // Function to swap two numbers using a temporary variable
+    public static void SwapNumbers(int a, int b)
+    {
         int temp = a;
         a = b;
         b = temp;
 
-        PrintValue($"After swap: a = {a}, b = {b}");
+        PrintValue($"Inside method (without ref): a = {a}, b = {b}");
+    }
+
+    // Overloaded function to swap two numbers using ref
+    public static void SwapNumbers(ref int a, ref int b)
+    {
+        int temp = a;
+        a = b;
+        b = temp;
+
+        PrintValue($"Inside method (with ref): a = {a}, b = {b}");
     }
 
     // Function to convert days to weeks and remaining days
